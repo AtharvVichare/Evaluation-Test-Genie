@@ -2,6 +2,7 @@ Jet Graph Dataset Builder
 Converts raw quark/gluon jet images from HDF5 into a PyTorch Geometric (PyG) graph dataset ready for GNN training.
 
 What it does
+
 Stage 1 — Load & Normalize
 Reads up to N_EVENTS events from the HDF5 file (X_jets, y, pt, m0). Each jet image is shape (125, 125, 3) — three calorimeter channels. Per-channel min-max normalization is applied across the full loaded dataset.
 
