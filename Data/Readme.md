@@ -16,7 +16,9 @@ Stage 4 — Save
 All Data objects are collated via InMemoryDataset.collate() and saved as a single .pt file containing a (data_obj, slices) tuple.
 
 Config
-ParameterDefaultDescriptionDATA_PATHData/quark-gluon_data-set_n139306.hdf5Input HDF5SAVE_PATHData/jet_pyg_dataset.ptOutput graph datasetN_EVENTS10,000Events to processMAX_NODES1,000Max nodes per graphK_NEIGHBORS8kNN connectivityLAYER_SEP0.5Z-spacing between channelsVISUALIZETrueShow Plotly 3D for first event
+ParameterDefaultDescriptionDATA_PATHData/quark-gluon_data-set_n139306.hdf5Input 
+
+HDF5SAVE_PATHData/jet_pyg_dataset.ptOutput graph datasetN_EVENTS10,000Events to process MAX_NODES1, 000Max nodes per graphK_NEIGHBORS8kNN connectivityLAYER_SEP0.5Z-spacing between channelsVISUALIZETrueShow Plotly 3D for first event
 
 Output — each Data object contains
 AttributeShapeDescriptionx(N, 5)Node featurespos(N, 3)3D spatial positionsedge_index(2, E)COO edge connectivityedge_attr(E, 1)Edge distancesy(1,)Label — 0=gluon, 1=quarkpt(1,)Jet transverse momentumm0(1,)Jet invariant mass
