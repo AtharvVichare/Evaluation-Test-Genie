@@ -4,10 +4,13 @@ Converts raw quark/gluon jet images from HDF5 into a PyTorch Geometric (PyG) gra
 What it does
 Stage 1 — Load & Normalize
 Reads up to N_EVENTS events from the HDF5 file (X_jets, y, pt, m0). Each jet image is shape (125, 125, 3) — three calorimeter channels. Per-channel min-max normalization is applied across the full loaded dataset.
+
 Stage 2 — Image → Point Cloud
 Each channel's non-zero pixels become 3D points. Node features are 5-dimensional: [x_norm, y_norm, z, intensity, channel_id], where z separates channels in 3D space via LAYER_SEP. Only the top-MAX_NODES pixels by intensity are kept per graph to control size.
+
 Stage 3 — kNN Graph Construction
 A k-nearest-neighbor graph (k=8) is built per event using torch.cdist — no sklearn dependency. The graph is undirected, and edge attributes store Euclidean distances between connected nodes.
+
 Stage 4 — Save
 All Data objects are collated via InMemoryDataset.collate() and saved as a single .pt file containing a (data_obj, slices) tuple.
 
