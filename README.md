@@ -1,10 +1,14 @@
-# Dowload the 
+#This readme mentions all the metrics of the solution and images as well
+Dowload the 
 
 Raw file from ML4Sci: https://drive.google.com/file/d/1WO2K-SfU2dntGU4Bb3IYBp9Rh7rtTYEr/view?usp=sharing
 
 And It' processed version (processed with CT-02 (Data Pre Pre Processor in Common Task 2),  the same processed dataset is used for further sp1 and sp4 tasks.
 
 Download processed Dataset: https://drive.google.com/file/d/1ogTlGvCi6QH5E8WfUiH_wEhg3U6mbcdH/view?usp=sharing
+
+#The proposed architecture by me is early implemented in repo link:https://github.com/AtharvVichare/EarlyImplementationGLADC01, 
+You can visit it and findings attached in my proposal.
 
 Put these put files in Data folder to run all the code successfully.
 # ML4Sci 2026 — Evaluation Tasks
