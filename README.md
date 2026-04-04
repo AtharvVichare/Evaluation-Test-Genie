@@ -1,7 +1,7 @@
 # This readme mentions all the metrics of the solution and images as well
 Dowload the 
 
-Raw file from ML4Sci: https://drive.google.com/file/d/1WO2K-SfU2dntGU4Bb3IYBp9Rh7rtTYEr/view?usp=sharing
+Raw file from ML4Sci(quark-gloun-classification dataset): https://drive.google.com/file/d/1WO2K-SfU2dntGU4Bb3IYBp9Rh7rtTYEr/view?usp=sharing
 
 And It' processed version (processed with CT-02 (Data Pre Pre Processor in Common Task 2),  the same processed dataset is used for further sp1 and sp4 tasks.
 
