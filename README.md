@@ -6,7 +6,8 @@ Raw file from ML4Sci(quark-gloun-classification dataset): https://drive.google.c
 And It' processed version (processed with CT-02 (Data Pre Pre Processor in Common Task 2),  the same processed dataset is used for further sp1 and sp4 tasks.
 
 Download processed Dataset: https://drive.google.com/file/d/1ogTlGvCi6QH5E8WfUiH_wEhg3U6mbcdH/view?usp=sharing
-Put these put files in Data folder to run all the code successfully.
+
+Put these both files in Data folder to run all the code successfully.
 
 # The proposed architecture by me is early implemented in repo link:https://github.com/AtharvVichare/EarlyImplementationGLADC01, 
 You can visit it and findings attached in my proposal.
