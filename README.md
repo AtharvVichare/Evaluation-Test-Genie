@@ -160,12 +160,12 @@ InMemoryDataset.collate → saved as jet_pyg_dataset.pt
 
 | Model | Accuracy | ROC-AUC |
 |---|---|---|
-| GCN | — | — |
-| GAT | — | — |
-| GraphSAGE | — | — |
-| EdgeConv | — | — |
-| ImprovedGNN | — | — |
-| **ChebNet (K=5)** | **72.90%** | **0.7869** |
+| GCN | **69.33%** | **0.7776** |
+| GAT | **68.53%** | **0.7753** |
+| GraphSAGE | **69.73%** | **0.7740** |
+| EdgeConv | **70.80%** | **0.7845** |
+| ImprovedGNN | **69.13%** | **0.7692** |
+| **ChebNet** | **72.90%** | **0.7869** |
 
 > Trained model results populate at runtime. ChebNet results are injected from pre-training.
 
@@ -254,10 +254,21 @@ ELU activation per layer
 ---
 
 ### ST 01 v3 — JetGLADC v3
+<img width="1433" height="627" alt="image" src="https://github.com/user-attachments/assets/2cd0a83c-64ec-4393-8f40-eea75358447e" />
+
 
 **Notebook:** `ST-01-v3__1_.ipynb`
 
 **Task:** Upgrade v2 with supervised contrastive learning (SupCon), a fixed Chebyshev rescaling, triple-pool readout, and training efficiency improvements.
+
+| Metric | Value |
+|---|---|
+| Accuracy | **72.47%** |
+| ROC-AUC | **0.7999** |
+| Precision | 0.7612 |
+| Recall | 0.6569 |
+| F1 | 0.7052 |
+
 
 **Changes from v2:**
 
@@ -270,11 +281,6 @@ ELU activation per layer
 | Input norm | None | **BatchNorm on raw node features** |
 | Training speed | Baseline | **AMP autocast + GradScaler (~2× on CUDA)** |
 
-**Why SupCon over NT-Xent:**  
-NT-Xent treats every other graph in the batch as a negative, including graphs of the same class. SupCon uses labels to construct label-aware positives — all quark jets attract each other, all gluon jets attract each other, cross-class pairs repel. This produces more linearly separable embeddings than self-supervised NT-Xent.
-
-**Why fixed ChebNet basis:**  
-v2 applied the filter directly on L̃ without correct eigenvalue scaling, placing the Chebyshev domain outside [−1, 1]. v3 uses L̂ = −D^{−½}AD^{−½} which has spectral range [−1, 1] by construction (λ_max = 2 exactly), making the polynomial approximation valid.
 
 **Evaluation additions in v3:**
 - UMAP / t-SNE latent space visualisation before and after training — confirms SupCon creates tighter class clusters
@@ -289,6 +295,7 @@ v2 applied the filter directly on L̃ without correct eigenvalue scaling, placin
 | Common Task 1 | CNN Autoencoder (linear probe) | 72.90% | 0.7877 |
 | Common Task 2 | ChebNet (K=5, 3-layer) | 72.90% | 0.7869 |
 | Specific Task v2 | JetGLADC v2 (Stable-ChebNet + NT-Xent) | 72.90% | 0.7869 |
+| Specific Task v3 | JetGLADC v2 (Stable-ChebNet + Supervised contrastive) | 72.47% | 0.7999 |
 
 > ⚠ **Note on current metrics:** Quantitative metrics are directly dependent on full convergence of the contrastive loss (NT-Xent / SupCon). Complete convergence of InfoNCE-class losses at this scale is computationally intensive — the current implementation does not have access to the compute required to drive contrastive loss to its optimal minimum. Despite this, the model demonstrates meaningful progress: L₃ successfully reduces the distance between Z_G and Z'_G for SM jets across training, and the latent space develops emerging geometric structure with partial jet identity separation. With increased computational resources allowing full contrastive convergence, the discriminative potential of the pipeline is expected to improve substantially. The architecture and training protocol are validated — compute is the remaining bottleneck.
 
