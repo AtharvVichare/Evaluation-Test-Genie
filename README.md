@@ -7,15 +7,8 @@ And It' processed version (processed with CT-02 (Data Pre Pre Processor in Commo
 Download processed Dataset: https://drive.google.com/file/d/1ogTlGvCi6QH5E8WfUiH_wEhg3U6mbcdH/view?usp=sharing
 
 Put these put files in Data folder to run all the code successfully.
-# ML4Sci GSoC 2026 — Evaluation Tasks
+# ML4Sci 2026 — Evaluation Tasks
 ### Deep Graph Anomaly Detection with Contrastive Learning for New Physics Searches
-
-> **Candidate:** Atharv Sandeep Vichare  
-> **Institute:** VESIT, Mumbai · B.E. Artificial Intelligence and Data Science (Year 3)  
-> **Project:** GENIE — Deep Graph Anomaly Detection with Contrastive Learning  
-> **Mentors:** Sergei Gleyzer (Alabama) · Ali Hariri (EPFL) · Amal Saif (PSUT) · Tom Magorsch (TUM)
-
-
 
 ## Common Task 1 — Convolutional Autoencoder for Jet Reconstruction
 
