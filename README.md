@@ -262,7 +262,7 @@ ELU activation per layer
 | LR schedule | OneCycleLR (peak 3e-3, warm-up → cosine) |
 | Contrastive temperature τ | 0.15 |
 | Grad clip | 2.0 |
-| Activation | ELU |
+| Activation | RELU |
 
 **Key design decisions:**
 - `OneCycleLR` replaces `CosineAnnealingLR` — less aggressive early decay, faster initial convergence
