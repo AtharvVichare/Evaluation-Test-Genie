@@ -195,6 +195,21 @@ InMemoryDataset.collate → saved as jet_pyg_dataset.pt
 ## Specific Task 01 — JetGLADC: Stable-ChebNet + Contrastive Learning
 
 Two versions developed iteratively. Both classify quark vs gluon jets using a Stable-ChebNet encoder with contrastive learning, demonstrating the architecture proposed in the main GSoC project.
+---
+## Describing Stable Chebnet
+---
+Stable ChebNet: ODE Formulation with Antisymmetric Weights
+To enable large K without instability, Stable-ChebNet reformulates the layer dynamics as a continuoustime ODE[5]:
+<img width="1784" height="400" alt="image" src="https://github.com/user-attachments/assets/5da4072e-8a7a-4943-9aba-451c7aff5736" />
+
+By enforcing antisymmetric weight matrices W⊤k = −Wk and using the symmetric normalised Laplacian, Theorem 3 guarantees purely imaginary Jacobian eigenvalues Re(λi(J)) = 0, ensuring
+non-dissipative information propagation: energy is preserved and distant nodes remain sensitive to
+far-away inputs.
+Discretising with forward Euler and adding a damping term γI yields the Stable-ChebNet update:
+<img width="985" height="155" alt="image" src="https://github.com/user-attachments/assets/339d5451-d058-4c6f-9592-6be3fb70406e" />
+where ϵ > 0 is the step size. Theorem 4 proves second-order stability:
+
+<img width="445" height="135" alt="image" src="https://github.com/user-attachments/assets/f225e9c7-f106-4dc2-b947-7844da18e746" />
 
 ---
 
