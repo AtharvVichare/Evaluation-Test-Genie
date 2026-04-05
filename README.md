@@ -199,7 +199,7 @@ Two versions developed iteratively. Both classify quark vs gluon jets using a St
 ### Describing Stable Chebnet
 ---
 Stable ChebNet: ODE Formulation with Antisymmetric Weights
-To enable large K without instability, Stable-ChebNet reformulates the layer dynamics as a continuoustime ODE[5]:
+To enable large K without instability, Stable-ChebNet reformulates the layer dynamics as a continuoustime ODE[2]:
 <img width="1784" height="400" alt="image" src="https://github.com/user-attachments/assets/5da4072e-8a7a-4943-9aba-451c7aff5736" />
 
 By enforcing antisymmetric weight matrices W⊤k = −Wk and using the symmetric normalised Laplacian, Theorem 3 guarantees purely imaginary Jacobian eigenvalues Re(λi(J)) = 0, ensuring
