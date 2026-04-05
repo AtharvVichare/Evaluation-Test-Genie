@@ -196,7 +196,7 @@ InMemoryDataset.collate → saved as jet_pyg_dataset.pt
 
 Two versions developed iteratively. Both classify quark vs gluon jets using a Stable-ChebNet encoder with contrastive learning, demonstrating the architecture proposed in the main GSoC project.
 ---
-## Describing Stable Chebnet
+### Describing Stable Chebnet
 ---
 Stable ChebNet: ODE Formulation with Antisymmetric Weights
 To enable large K without instability, Stable-ChebNet reformulates the layer dynamics as a continuoustime ODE[5]:
