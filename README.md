@@ -7,6 +7,8 @@ And It' processed version (processed with CT-02 (Data Pre Pre Processor in Commo
 
 Download processed Dataset: https://drive.google.com/file/d/1ogTlGvCi6QH5E8WfUiH_wEhg3U6mbcdH/view?usp=sharing
 
+The proccessed version contains list of single pyg Data wrapped graphs. Hence repeated raw data to graph conversion is required.
+
 Put these both files in Data folder to run all the code successfully.
 
 # The proposed architecture by me is early implemented in repo link:https://github.com/AtharvVichare/EarlyImplementationGLADC01, 
