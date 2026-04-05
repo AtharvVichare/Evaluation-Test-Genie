@@ -327,7 +327,6 @@ ELU activation per layer
 | Specific Task v2 | JetGLADC v2 (Stable-ChebNet + NT-Xent) | 72.90% | 0.7869 |
 | Specific Task v3 | JetGLADC v2 (Stable-ChebNet + Supervised contrastive) | 72.47% | 0.7999 |
 
-> ⚠ **Note on current metrics:** Quantitative metrics are directly dependent on full convergence of the contrastive loss (NT-Xent / SupCon). Complete convergence of InfoNCE-class losses at this scale is computationally intensive — the current implementation does not have access to the compute required to drive contrastive loss to its optimal minimum. Despite this, the model demonstrates meaningful progress: L₃ successfully reduces the distance between Z_G and Z'_G for SM jets across training, and the latent space develops emerging geometric structure with partial jet identity separation. With increased computational resources allowing full contrastive convergence, the discriminative potential of the pipeline is expected to improve substantially. The architecture and training protocol are validated — compute is the remaining bottleneck.
 
 ---
 
