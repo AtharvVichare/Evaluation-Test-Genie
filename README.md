@@ -346,7 +346,7 @@ pip install h5py numpy matplotlib scikit-learn plotly tqdm
 |---|---|---|
 | `quark-gluon_data-set_n139306.hdf5` | CT1, CT2 | CMS Open Data / ML4Sci |
 | `jet_pyg_dataset.pt` | CT2 training | Built by `CT-2_Data_Preprocessor_.ipynb` |
-| `events_anomalydetection_v2.h5` | Specific Task (GlAD-SCN) | LHCO R&D Dataset, zenodo.org/record/4536377 |
+|  `jet_pyg_dataset.pt`  | Specific Task (GlAD-SCN) | Built by `CT-2_Data_Preprocessor_.ipynb` |
 
 ---
 
