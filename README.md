@@ -13,6 +13,13 @@ Put these both files in Data folder to run all the code successfully.
 
 # The proposed architecture by me is early implemented in repo link:https://github.com/AtharvVichare/EarlyImplementationGLADC01, 
 You can visit it and findings attached in my proposal.
+## Short insight of why I am choosing Stable Chebnet over all the GNN's:
+# Dirichlet energy — encoder stability comparison
+image
+Dirichlet energy (DE) measures how well node embeddings retain distinct information throughout training. A high, stable DE means nodes remain distinguishable — critical for a fine-grained anomaly score. Collapse toward zero means over-smoothing: all nodes become identical and the encoder loses discriminative power.
+<img width="1650" height="750" alt="image" src="https://github.com/user-attachments/assets/54743d54-a679-4daf-9081-2af87cfe163e" />
+
+Stable Chebnet shows higher Dirichlet energy about ~21, over 80 epochs meanwhile other GNN's can't even sustain above 10 epochs. Edgeconv shows higher dirichlet ever about ~66 at start but sharply drops till 5th epoch and it is also computationally expensive , which makes it unsuitable for the Graph level Anomaly Detection Task. 
 
 # ML4Sci 2026 — Evaluation Tasks
 ### Deep Graph Anomaly Detection with Contrastive Learning for New Physics Searches
