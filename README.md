@@ -20,7 +20,7 @@ image
 Dirichlet energy (DE) measures how well node embeddings retain distinct information throughout training. A high, stable DE means nodes remain distinguishable — critical for a fine-grained anomaly score. Collapse toward zero means over-smoothing: all nodes become identical and the encoder loses discriminative power.
 <img width="1650" height="750" alt="image" src="https://github.com/user-attachments/assets/54743d54-a679-4daf-9081-2af87cfe163e" />
 
-Stable Chebnet shows higher Dirichlet energy about ~21 DE , over 80 epochs meanwhile other GNN's can't even sustain above 10 DE. Edgeconv shows higher dirichlet ever about ~66 at start but sharply drops till 5th epoch and it is also computationally expensive , which makes it unsuitable for the Graph level Anomaly Detection Task. 
+Stable Chebnet shows higher Dirichlet energy about ~21 DE , over 80 epochs meanwhile other GNN's can't even sustain above 10 DE. Edgeconv shows higher dirichlet ever about ~66 at start but sharply drops till 5th epoch and it is unstable during training and easy to overfit , which makes it unsuitable for the Graph level Anomaly Detection Task. 
 
 # ML4Sci 2026 — Evaluation Tasks
 ### Deep Graph Anomaly Detection with Contrastive Learning for New Physics Searches
